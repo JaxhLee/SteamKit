@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace SteamLanguageParser
 {
-    class Token
+    public class Token
     {
         public string Name { get; }
         public string Value { get; }
@@ -24,7 +24,7 @@ namespace SteamLanguageParser
         }
     }
 
-    struct TokenSourceInfo
+    public struct TokenSourceInfo
     {
         public TokenSourceInfo(string fileName, int startLineNumber, int startColumnNumber, int endLineNumber, int endColumnNumber)
         {
@@ -42,7 +42,7 @@ namespace SteamLanguageParser
         public int EndColumnNumber { get; }
     }
     
-    class LanguageParser
+    public class LanguageParser
     {
         public static string pattern =
         @"(?<whitespace>\s+)|" +
